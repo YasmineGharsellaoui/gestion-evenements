@@ -1,0 +1,50 @@
+<div class="super_container" style="margin-top: 100px;">
+    
+    <div class="contact">
+            
+        
+        <!-- Contact Info -->
+    
+        <div class="contact_info_container">
+            <div class="container">
+                <div class="row">
+    
+                    <!-- Contact Form -->
+                    <div class="col-lg-12">
+                        <div class="contact_form">
+                            <div class="contact_info_title">Display Events</div>
+                            <div>
+                                <table class="table table-striped">
+                                    <tr>
+                                        <th>Event Name</th>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    <tr *ngFor="let e of events">
+                                        <td [ngStyle]="{color: getColor(e.name)}">{{e.name | uppercase}}</td>
+                                        <td>{{e.date | date}}</td>
+                                        <td [ngClass]="{'red': e.name == 'Athlète',
+                                                        'green': e.name == 'camping',
+                                                        'blue': e.name == 'WaterEvent'}">{{e.description | lowercase}}</td>
+                                        <td>
+                                            <button class="btn btn-success" (click)="displayEvent(e._id)" >Display</button>
+                                            <button class="btn btn-info" (click)="editEvent(e._id)">Edit</button>
+                                            <button class="btn btn-warning" (click)="deleteEvent(e._id)">Delete</button>
+
+
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    

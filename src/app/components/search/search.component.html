@@ -1,0 +1,46 @@
+<div class="super_container" style="margin-top: 100px;">
+
+    <div class="contact">
+
+        <div class="contact_info_container">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Contact Form -->
+                    <div class="col-lg-4" style="margin-left: 35%;">
+                        <div class="contact_form">
+                            <div class="contact_info_title" style="text-align: center;">Search</div>
+                            <form class="comment_form" [formGroup]="searchForm">
+                                <div>
+                                    <input type="text" class="comment_input" formControlName="search" placeholder="Search">
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="comment_button trans_200" style="margin-left: 30% ;"
+                                        (click)="search(searchForm.value)"> Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="events" *ngIf="isDisplay">
+		<div class="container">
+			
+			<div class="row events_row">
+
+				<div class="col-lg-4 event_col" *ngFor="let e of events">
+						<app-event [childEvent]='e' ></app-event>
+                        <!-- (click)='update($event)' -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>

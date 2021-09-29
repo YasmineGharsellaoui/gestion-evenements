@@ -1,0 +1,90 @@
+ <div class="super_container" style="margin-top: 100px;">
+<!-- Contact -->
+
+<div class="contact">
+		
+     <!-- Contact Map
+
+    <div class="contact_map">
+
+        Google Map 
+        
+        div class="map">
+            <div id="google_map" class="google_map">
+                <div class="map_container">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div> 
+
+    </div>  -->
+
+    <!-- Contact Info -->
+
+    <div class="contact_info_container">
+        <div class="container">
+            <div class="row">
+
+                <!-- Contact Form -->
+                <div class="col-lg-12">
+                    <div class="contact_form">
+                        <div class="contact_info_title">{{title}} Event</div>
+                        <form #eventForm="ngForm" (ngSubmit)="addOrEditEvent()" class="comment_form">
+                            <div>
+                                <div class="form_title"> Event Name</div>
+                                <input type="text" class="comment_input" [(ngModel)]="event.name" [ngModelOptions]="{standalone: true}" >
+                            </div>
+                            <div>
+                                <div class="form_title">Date</div>
+                                <input type="date" class="comment_input" [(ngModel)]="event.date" [ngModelOptions]="{standalone: true}" >
+                            </div>
+                            <div>
+                                <div class="form_title">Description</div>
+                                <textarea class="comment_input comment_textarea" [(ngModel)]="event.description" [ngModelOptions]="{standalone: true}"  ></textarea>
+                            </div>
+
+                            <button type="button" (click)='filePicker.click()' class="comment_button trans_200" style="color: white;">Sélectionner
+                                image</button>
+                            <div class="form-group">
+                                <input style="visibility: hidden;" type="file" class="form-control" #filePicker
+                                    (change)='onImageSelected($event)'  />
+                            </div>
+                            <img [src]="imagePreview" *ngIf="imagePreview" width="200px" height="200px">
+                            <div>
+                                <button type="submit" class="comment_button trans_200">{{title}} Event</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <!-- <div class="col-lg-6">
+                    <div class="contact_info">
+                        <div class="contact_info_title">Contact Info</div>
+                        <div class="contact_info_text">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a distribution of letters.</p>
+                        </div>
+                        <div class="contact_info_location">
+                            <div class="contact_info_location_title">New York Office</div>
+                            <ul class="location_list">
+                                <li>T8/480 Collins St, Melbourne VIC 3000, New York</li>
+                                <li>1-234-567-89011</li>
+                                <li>info.deercreative@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="contact_info_location">
+                            <div class="contact_info_location_title">Australia Office</div>
+                            <ul class="location_list">
+                                <li>Forrest Ray, 191-103 Integer Rd, Corona Australia</li>
+                                <li>1-234-567-89011</li>
+                                <li>info.deercreative@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+

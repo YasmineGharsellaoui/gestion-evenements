@@ -1,0 +1,177 @@
+<div class="super_container" style="margin-top: 100px;">
+    <!-- Contact -->
+
+    <div class="contact">
+
+        <!-- Contact Map
+    
+        <div class="contact_map">
+    
+            Google Map 
+            
+            div class="map">
+                <div id="google_map" class="google_map">
+                    <div class="map_container">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div> 
+    
+        </div>  -->
+
+        <!-- Contact Info -->
+
+        <div class="contact_info_container">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Contact Form -->
+                    <div class="col-lg-12">
+                        <div class="contact_form">
+                            <div class="contact_info_title">SignUp</div>
+                            <form class="comment_form" [formGroup]="signupForm">
+                                <div>
+                                    <div class="form_title"> First Name</div>
+                                    <input type="text" class="comment_input" formControlName="firstName">
+                                </div>
+
+                                <div
+                                    *ngIf="
+                                     signupForm.controls['firstName'].invalid && 
+                                    (signupForm.controls['firstName'].dirty || signupForm.controls['firstName'].touched)">
+
+                                    <div *ngIf="signupForm.controls['firstName'].errors!.required">
+                                        First Name is required
+                                    </div>
+
+                                    <div *ngIf="signupForm.controls['firstName'].errors!.minlength" >
+                                        First Name must have at least 3 characters
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <div>
+                                    <div class="form_title"> Last Name</div>
+                                    <input type="text" class="comment_input" formControlName="lastName">
+                                </div>
+                                <div *ngIf="
+                                signupForm.controls['lastName'].invalid && 
+                               (signupForm.controls['lastName'].dirty || signupForm.controls['lastName'].touched)">
+
+                                    <div *ngIf="signupForm.controls['lastName'].errors.required" class="text-danger">
+                                        Last Name is required
+                                    </div>
+
+                                    <div *ngIf="signupForm.controls['lastName'].errors.minlength" class="text-danger">
+                                        Last Name must have at least 5 characters
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="form_title"> Email</div>
+                                    <input type="email" class="comment_input" formControlName="email">
+                                </div>
+                                <div *ngIf="
+                                signupForm.controls['email'].invalid && 
+                               (signupForm.controls['email'].dirty || signupForm.controls['email'].touched)">
+
+                                    <div *ngIf="signupForm.controls['email'].errors.required" class="text-danger">
+                                        Email is required
+                                    </div>
+
+                                    <div *ngIf="signupForm.controls['email'].errors.email" class="text-danger">
+                                        Invalid email
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="form_title"> Password</div>
+                                    <input type="password" class="comment_input" formControlName="password">
+                                </div>
+                                <div *ngIf="
+                                signupForm.controls['password'].invalid && 
+                               (signupForm.controls['password'].dirty || signupForm.controls['password'].touched)">
+
+                                    <div *ngIf="signupForm.controls['password'].errors.required" class="text-danger">
+                                        Password is required
+                                    </div>
+
+                                    <div *ngIf="signupForm.controls['password'].errors.minlength" class="text-danger">
+                                        Password must have at least 8 characters
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="form_title"> Confirm Password</div>
+                                    <input type="password" class="comment_input" formControlName="confirmPassword">
+                                </div>
+                                <div
+                                    *ngIf="
+                                signupForm.controls['confirmPassword'].invalid && 
+                               (signupForm.controls['confirmPassword'].dirty || signupForm.controls['confirmPassword'].touched)">
+
+                                    <div *ngIf="signupForm.controls['confirmPassword'].errors.required"
+                                        class="text-danger">
+                                        Confirm Password is required
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <div class="form_title">Tel </div>
+                                    <input type="tel" class="comment_input" formControlName="tel">
+                                </div>
+                                <div *ngIf="
+                                signupForm.controls['tel'].invalid && 
+                               (signupForm.controls['tel'].dirty || signupForm.controls['tel'].touched)">
+
+                                    <div *ngIf="signupForm.controls['tel'].errors.required" class="text-danger">
+                                        Tel is required
+                                    </div>
+
+                                    <div *ngIf="signupForm.controls['tel'].errors.minlength" class="text-danger">
+                                        Invalid tel
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="comment_button trans_200"
+                                        (click)="signup(signupForm.value)"> SignUp</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <!-- <div class="col-lg-6">
+                        <div class="contact_info">
+                            <div class="contact_info_title">Contact Info</div>
+                            <div class="contact_info_text">
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a distribution of letters.</p>
+                            </div>
+                            <div class="contact_info_location">
+                                <div class="contact_info_location_title">New York Office</div>
+                                <ul class="location_list">
+                                    <li>T8/480 Collins St, Melbourne VIC 3000, New York</li>
+                                    <li>1-234-567-89011</li>
+                                    <li>info.deercreative@gmail.com</li>
+                                </ul>
+                            </div>
+                            <div class="contact_info_location">
+                                <div class="contact_info_location_title">Australia Office</div>
+                                <ul class="location_list">
+                                    <li>Forrest Ray, 191-103 Integer Rd, Corona Australia</li>
+                                    <li>1-234-567-89011</li>
+                                    <li>info.deercreative@gmail.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
